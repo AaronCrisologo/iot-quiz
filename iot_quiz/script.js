@@ -472,6 +472,107 @@ const quizData = [
             "Only used in laboratories"
         ]
     },
+    // Additional IoT1 questions to reach 50
+    {
+        question: "What is one of the main benefits of IoT in manufacturing?",
+        correct: "Machines can detect faults that may not be detected by the human eye",
+        wrong: [
+            "Increased manual inspection",
+            "More human workers needed",
+            "Slower production speeds",
+            "Higher defect rates"
+        ]
+    },
+    {
+        question: "What does IoT help organizations leverage to enhance productivity?",
+        correct: "Insights from data analysis",
+        wrong: [
+            "More meetings",
+            "Paper documentation",
+            "Manual processes",
+            "Guesswork"
+        ]
+    },
+    {
+        question: "What is the result when an organization improves uptime, automates processes, and reduces failure risk?",
+        correct: "Efficiency and cost savings",
+        wrong: [
+            "Higher expenses",
+            "More downtime",
+            "Reduced efficiency",
+            "Increased complexity"
+        ]
+    },
+    {
+        question: "What can IoT technology help create in workspaces?",
+        correct: "More comfortable and efficient workspaces",
+        wrong: [
+            "More crowded spaces",
+            "Less comfortable environments",
+            "Higher energy consumption",
+            "Reduced productivity"
+        ]
+    },
+    {
+        question: "What is adaptability in IoT?",
+        correct: "Ability to adapt to new requirements, customer needs, and changing conditions",
+        wrong: [
+            "Rigid system design",
+            "Inability to scale",
+            "Resistance to change",
+            "Fixed functionality"
+        ]
+    },
+    {
+        question: "What is the IoT Ecosystem composed of?",
+        correct: "Physical devices, communication infrastructure, computing resources, applications, data, and stakeholders",
+        wrong: [
+            "Only sensors",
+            "Just cloud services",
+            "Single vendor solutions",
+            "Only hardware"
+        ]
+    },
+    {
+        question: "What is the purpose of the Perception/Sensing Layer?",
+        correct: "Collect data from the physical environment using sensors",
+        wrong: [
+            "Process cloud data",
+            "Provide user interfaces",
+            "Store information permanently",
+            "Connect to the internet"
+        ]
+    },
+    {
+        question: "What happens in the Network/Transport Layer?",
+        correct: "Data is transmitted over communication networks",
+        wrong: [
+            "Sensors collect data",
+            "Actuators perform actions",
+            "Applications run",
+            "Data is deleted"
+        ]
+    },
+    {
+        question: "Where does edge processing occur?",
+        correct: "Close to the data source, before reaching the cloud",
+        wrong: [
+            "Only in the cloud",
+            "At the sensor itself",
+            "In distant data centers",
+            "Not at all"
+        ]
+    },
+    {
+        question: "What is the Application Layer responsible for?",
+        correct: "Providing services and interfaces to end users",
+        wrong: [
+            "Collecting raw sensor data",
+            "Transmitting data over networks",
+            "Storing all data permanently",
+            "Powering the devices"
+        ]
+    },
     // Questions from IoT2_.pdf - IoT Protocols (Chapter 2)
     {
         question: "Why is traditional TCP/IP not automatically the fundamental standard in IoT?",
@@ -811,6 +912,157 @@ const quizData = [
             "No proxying is possible",
             "Only BLE can proxy",
             "Only IPv6 proxies"
+        ]
+    },
+    // Additional IoT2 questions to reach 50 total
+    {
+        question: "What type of networks are WSN and WSAN?",
+        correct: "Wireless networks with sensor/actuator nodes",
+        wrong: [
+            "Wired networks only",
+            "Satellite networks",
+            "Fiber optic networks",
+            "Cellular networks only"
+        ]
+    },
+    {
+        question: "What characterizes IoT networks as 'lossy'?",
+        correct: "High packet loss rates and unreliable connections",
+        wrong: [
+            "They lose physical devices",
+            "They cannot transmit data",
+            "They are always offline",
+            "They have no packet loss"
+        ]
+    },
+    {
+        question: "Which IEEE standard is associated with 6LoWPAN?",
+        correct: "IEEE 802.15.4",
+        wrong: [
+            "IEEE 802.11",
+            "IEEE 802.3",
+            "IEEE 802.16",
+            "IEEE 802.1"
+        ]
+    },
+    {
+        question: "What does 6LoWPAN enable?",
+        correct: "IPv6 packets over low-power wireless networks",
+        wrong: [
+            "IPv4 over high-speed networks",
+            "Only IPv6 on wired networks",
+            "IPv6 over satellite only",
+            "No IP networking"
+        ]
+    },
+    {
+        question: "What is a key element of 6LoWPAN?",
+        correct: "Header compression and adaptation layer",
+        wrong: [
+            "High power consumption",
+            "Large packet sizes",
+            "No addressing",
+            "Wired connectivity only"
+        ]
+    },
+    {
+        question: "What is RPL designed for?",
+        correct: "Routing in low-power and lossy networks",
+        wrong: [
+            "High-speed backbone routing",
+            "Wired enterprise networks",
+            "Satellite networks",
+            "Only IPv4 networks"
+        ]
+    },
+    {
+        question: "What type of topology does RPL typically create?",
+        correct: "DODAG (Destination-Oriented Directed Acyclic Graph)",
+        wrong: [
+            "Mesh only",
+            "Star only",
+            "Bus topology",
+            "Ring topology"
+        ]
+    },
+    {
+        question: "What is CoAP's primary transport protocol?",
+        correct: "UDP",
+        wrong: [
+            "TCP",
+            "HTTP",
+            "FTP",
+            "SMTP"
+        ]
+    },
+    {
+        question: "Which CoAP method is used to retrieve a resource?",
+        correct: "GET",
+        wrong: [
+            "POST",
+            "PUT",
+            "DELETE",
+            "PATCH"
+        ]
+    },
+    {
+        question: "Which CoAP method is used to create a new resource?",
+        correct: "POST",
+        wrong: [
+            "GET",
+            "PUT",
+            "DELETE",
+            "OPTIONS"
+        ]
+    },
+    {
+        question: "Which CoAP method is used to update an existing resource?",
+        correct: "PUT",
+        wrong: [
+            "GET",
+            "POST",
+            "DELETE",
+            "PATCH"
+        ]
+    },
+    {
+        question: "Which CoAP method is used to remove a resource?",
+        correct: "DELETE",
+        wrong: [
+            "GET",
+            "POST",
+            "PUT",
+            "OPTIONS"
+        ]
+    },
+    {
+        question: "What is the default CoAP port number?",
+        correct: "5683",
+        wrong: [
+            "80",
+            "443",
+            "8080",
+            "53"
+        ]
+    },
+    {
+        question: "What is CoAP over DTLS used for?",
+        correct: "Secure communication",
+        wrong: [
+            "Faster transfers",
+            "Larger payloads",
+            "IPv6 only",
+            "No security needed"
+        ]
+    },
+    {
+        question: "What is observe option in CoAP used for?",
+        correct: "Resource state notifications (publish-subscribe)",
+        wrong: [
+            "Caching only",
+            "Proxying only",
+            "Block transfers only",
+            "No functionality"
         ]
     }
 ];
