@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IoT Knowledge Quiz</h1>
+            <p>Test your understanding of Internet of Things concepts</p>
+        </header>
+
+        <div id="start-screen" class="screen active">
+            <div class="start-content">
+                <h2>Welcome!</h2>
+                <p>This quiz contains questions about IoT (Internet of Things) based on course material.</p>
+                <p>Questions will be randomized along with answer choices.</p>
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="question-counter">Question 1/10</span>
+                    <span id="score-display">Score: 0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="answers-container" class="answers-container"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn btn-primary" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h2>Quiz Complete!</h2>
+                <div class="score-summary">
+                    <p id="final-score"></p>
+                    <p id="score-message"></p>
+                </div>
+                <button id="restart-btn" class="btn btn-primary">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

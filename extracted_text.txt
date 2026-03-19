@@ -1,0 +1,242 @@
+Chapter 1
+Introduction to IoT
+What is IoT?
+Internet of Things is the network of smart physical objects:
+physical objects (e.g. devices, vehicles, buildings, etc.) embedded 
+with sensors, computation unit, memory unit, power source, and 
+network connectivity, 
+which enables the physical object to collect and exchange data,
+analyze the collected data to extract new insight and respond 
+accordingly.
+Goal of IoT is to “connect the unconnected”  
+“Things” or “objects” that were not supposed to be connected to 
+the Internet
+IoT did the technology transition in traditional computer networks
+What is IoT?
+IoT is the Unifications of technologies:
+Embedded Systems
+Low Power and Low Rate Network
+Internet
+Cloud Computing
+Data Analytics
+Bigdata
+Edge Intelligence
+Network Security and Data Security
+Software Defined Networks
+What is IoT?
+Alternate Definition:
+“The Internet of Things (IoT) is the 
+network of physical objects that contain 
+embedded technology to communicate and 
+sense or interact with their internal states or 
+the external environment.” 
+Brief History of Initial Phase of IoT
+The term "Internet of Things" was likely 
+coined by Kevin Ashton of Procter & Gamble, 
+later MIT's Auto-ID Center, in 1999.
+“In 20th century, computers were brains 
+without senses — they only knew what we 
+told them.”
+“Now in 21st century, computers are sensing 
+things for themselves!”
+Brief History of Initial Phase of IoT
+Early 1980s at the Carnegie Melon University, a group of students 
+created a way to get their campus Coca-Cola vending machine to 
+report on its contents through a network in order to save them the 
+trek if the machine was out of Coke.
+In 1990, John Romkey, developer of the first TCP/IP stack for 
+IBM PC in 1983, connected a toaster to the internet for the first 
+time.
+ In 1991, a group of students at the University of Cambridge used 
+a web camera to report on coffee available in their computer labs 
+coffee pot.
+At the beginning of the 21st Century, LG Electronics introduced 
+the world’s first refrigerator connected to the internet
+Brief History of Initial Phase of IoT
+The popularity of IoT did not accelerate until 2010/2011 and 
+reached mass market from 2013-14.
+Definition of the IoT has also evolved over time.
+
+Benefits of IoT
+Real-Time Monitoring
+IoT sensors can monitor equipment and processes in real-time, 
+providing valuable sensed data that can be used to streamline 
+operations, reduce waste, and increase output.
+Automation of Processes
+Machines can assemble parts with more precision and speed, 
+resulting in fewer errors during assembly
+Robots can very rapidly detect faults that may not be detected 
+by the human eye
+Benefits of IoT
+Improved Efficiency or Productivity
+IoT helps to enhance productivity by streamlining processes, 
+automating tasks, and providing real-time data insights..
+Predictive Maintenance
+Machines can assemble parts with more precision and speed, 
+resulting in fewer errors during assembly
+Continuous monitoring of systems and processes to identify key 
+indicators of problems before they result in downtime or system 
+failure
+Benefits of IoT
+Improved or New Insights
+IoT generates vast amounts of data that can be analyzed to 
+identify trends, inefficiencies, and areas for improvement. 
+Organizations can leverage these insights to enhance 
+productivity and operational effectiveness.
+Cost Reduction
+When an organization can improve system uptime, automate 
+processes, reduce the risk of failure and gain insights that 
+support better decision making, and reduce resource usage, the 
+result is efficiency and cost savings.
+Benefits of IoT
+Optimized Work Environments
+IoT technology can help create more comfortable and efficient 
+workspaces
+Adaptability
+The ability to adapt to new business requirements, customer 
+needs, and changing conditions, or scale the deployment in 
+response to business growth or customer requirements
+Growth of IoT Devices
+
+Where is IoT?
+
+Global IoT Market Share
+
+Applications of IoT
+
+Smart City
+
+Smart Home
+
+ Industrial IoT
+
+Connected Cars
+
+ Livestock Management
+
+ Main Challenges in IoT Implementation
+
+IoT Ecosystem and Architecture
+It is an interconnected network of physical devices, communication 
+infrastructure, computing resources (both edge and cloud), 
+applications, data, and stakeholders that collaboratively collect, 
+exchange, and process data to enable intelligent service. 
+IoT Ecosystem and Architecture
+ 
+ 
+
+IoT Ecosystem and Architecture
+1) Perception/Sensing Layer, 
+2) Network/Transport Layer, 
+3) Edge Processing Layer, 
+4) Cloud Processing Layer, and
+5) Application Layer
+IoT Ecosystem and Architecture
+
+Sensors and Actuators
+A sensor is a device that detects and measures a physical property 
+from its environment and converts it into a signal, typically an 
+electrical one, that can be read by an observer or an instrument.
+Types of Sensors:
+Environmental
+Temperature
+humidity
+air quality and
+gas
+ 
+Sensors and Actuators
+Types of Sensors:
+Biometric & Wearable
+Heart rate, 
+SpO2, 
+electrodermal activity sensors.
+Positioning
+GPS,  
+indoor positioning beacons. 
+ 
+Sensors and Actuators
+Actuators are devices that convert electrical signals from 
+IoT systems into physical action. 
+They are the output mechanism that allows IoT systems 
+to interact with and control the physical world based on 
+sensor data and intelligent decisions.
+ 
+Sensors and Actuators
+Types of Actuators:
+Electrical motors:
+DC 
+Smart home
+Personal Mobility
+Servo 
+Robotics
+Pet feeder
+Stepper 
+3D Printing
+Robotics
+ 
+Sensors and Actuators
+Types of Actuators:
+Solenoid
+Security system
+Automotive
+Vending Machine
+Hydraulic Actuators
+Construction Equipment
+Manufacturing
+Marine
+ 
+Sensors and Actuators
+Types of Actuators:
+Electroactive Polymer
+Biomedical
+Microfluidics
+V oice Coil Actuators
+Audio System
+Medical Imaging
+ 
+Sensors and Actuators
+Types of Actuators:
+Electroactive Polymer
+Biomedical
+Microfluidics
+V oice Coil Actuators
+Audio System
+Medical Imaging
+ 
+IoT Hardware: Arduino
+It is an open-source electronics platform based on easy-
+to-use hardware and software
+With Arduino, you can control almost everything around 
+you be it simple LED or giant Robots.
+ 
+DIFFERENT TYPES OF ARDUINO
+
+DIFFERENT TYPES OF ARDUINO
+Arduino Mega 
+2560  Arduino 
+LilyPad
+Arduino Uno  DIY ArduinoBoarduino Kit
+ARDUINO UNO
+
+PINS IN ARDUINO  UNO R3
+
+DETAILED  PIN DIAGRAM
+
+PIN DESCRIPTION
+
+PIN DESCRIPTION
+
+ARDUINO  IN IOT
+
+ARDUINO  IN IOT
+
+ARDUINO  IN IOT
+
+ESP32 Pins
+
+ESP32 Pins
+
+ESP32 Pins
+
+?
+Thanks

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IoT Flashcards</h1>
+            <p class="subtitle">Chapter 1: Introduction to IoT</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text">Card <span id="currentCard">1</span> of <span id="totalCards">0</span></p>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-front">
+                    <div class="card-content" id="cardFront">
+                        <!-- Front content will be inserted here -->
+                    </div>
+                </div>
+                <div class="flashcard-back">
+                    <div class="card-content" id="cardBack">
+                        <!-- Back content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn">← Previous</button>
+            <button id="flipBtn" class="action-btn">Flip Card</button>
+            <button id="nextBtn" class="nav-btn">Next →</button>
+        </div>
+
+        <div class="keyboard-hint">
+            Press <kbd>Space</kbd> or <kbd>Enter</kbd> to flip, <kbd>←</kbd> <kbd>→</kbd> to navigate
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

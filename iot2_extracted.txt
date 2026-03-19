@@ -1,0 +1,141 @@
+Chapter 2
+IoT Protocols
+IoT Protocols
+IoT networks have unique traffic characteristics,
+
+which are significantly different from traditional
+networks
+IoT devices are often constrained, have limited
+
+computing power, are powered by the battery, and
+communicate over lossy networks.
+Due to these reasons, the traditional TCP/IP protocol
+
+suite used in legacy networks has not automatically
+become the fundamental standard in IoT
+IoT Protocols
+The heterogeneity of IoT application domains
+
+also means that different use cases have
+different requirements, which can only hardly
+be addressed with one standard.
+The most popular way of connecting them is
+
+using wireless technologies.
+IoT Protocols
+One of the main IoT building blocks is a
+
+Wireless Sensor Network (WSN) or a
+Wireless Sensor and Actuator Network
+(WSAN)
+WSN needs to work with traditional network
+
+IoT Protocols
+IoT Protocols
+IoT Protocols
+
+IoT Protocols
+Short Range Network
+Short range networks use wireless technologies that communicate
+
+over ranges of a few centimeters up to hundreds of meters. These
+include:
+Close range contactless data transfer technologies,
+
+wireless personal area networks (WPANs) as well as,
+
+wireless local area networks (WLANs).
+
+Short Range Network
+RFID – Radio Frequency Identification
+
+Frequency: Low/High/Ultra-high
+
+Range: 1cm - 100m
+
+Data Rate: 1-100 kbps
+
+Battery: Active (3-5 years)
+
+Standardization: Open (no single body)
+
+Key Role: Foundation of IoT concept (Ashton, 1999)
+
+Applications:
+
+Tracking,
+
+supply chain,
+
+inventory
+
+Short Range Network
+NFC (Near Field Communication)
+
+Frequency: 13.56 MHz
+
+Range: ~0.2m
+
+Data Rate: 424 kbps
+
+Battery: Passive or Active
+
+Standardization: ISO/IEC
+
+Three Modes: Card emulation, Reader/Writer, P2P
+
+Applications:
+
+Touch" interactions,
+
+pairing,
+
+payments
+
+Short Range Network
+BLE (Bluetooth Low Energy)
+
+Frequency: 2.4 GHz
+
+Range: 10-100m
+
+Data Rate: 1 Mbps
+
+Battery: Months to years
+
+Topology: P2P / Star
+
+Standardization: Bluetooth SIG
+
+Key Feature: Ultra-low power design
+
+IoT Interoperability What is IoT?
+IPv6
+IPv6 Header
+IPv6 Header
+IPv6 Header
+Changes from IPv4
+Changes from IPv4
+Changes from IPv4
+6LoWPAN
+IETF Low Power Lossy Network
+IEEE Wireless Standards
+IEEE Wireless Standards
+6LoWPAN Key Elements
+RPL
+RPL Functionality
+RPL Functionality
+RPL Functionality
+CoAP
+CoAP
+Constrained IP Networks
+Devices on Constrained Networks
+Application Scope of CoAP
+CoAP vs. HTTP
+CoAP RESTful Applications
+CoAP Server
+CoAP Methods
+CoAP Requests
+Proxying and Cachings
+?
+Thanks
