@@ -1,9 +1,8 @@
-﻿// IoT Quiz Data - Questions and Answers extracted from IoT1_.pdf
-const quizData = [
+
     // Original 15 questions
     {
         question: "What is the primary goal of IoT?",
-        correct: "Connecting unconnected devices",
+        correct: "Connect the unconnected",
         wrong: [
             "Replace all human workers",
             "Create artificial intelligence",
@@ -63,10 +62,10 @@ const quizData = [
     },
     {
         question: "What is a sensor?",
-        correct: "A device that senses physical properties and converts them to signals",
+        correct: "A device that detects and measures physical properties and converts them into signals",
         wrong: [
             "A device that converts electrical signals into physical action",
-            "A device focused on network connectivity",
+            "A device that only connects to the internet",
             "A device that stores data in the cloud",
             "A device that analyzes big data"
         ]
@@ -83,7 +82,7 @@ const quizData = [
     },
     {
         question: "What is the function of an actuator in IoT systems?",
-        correct: "Converts electrical signals into physical movement",
+        correct: "Converts electrical signals into physical action",
         wrong: [
             "Collects data from the environment",
             "Analyzes data patterns",
@@ -103,7 +102,7 @@ const quizData = [
     },
     {
         question: "What is Arduino?",
-        correct: "An open-source electronics platform with easy-to-use hardware and software",
+        correct: "An open-source electronics platform based on easy-to-use hardware and software",
         wrong: [
             "A type of sensor",
             "A cloud computing service",
@@ -123,7 +122,7 @@ const quizData = [
     },
     {
         question: "What are the 5 layers of IoT Architecture?",
-        correct: "Perception/Sensing, Network/Transport, Edge, Cloud, and Application",
+        correct: "Perception/Sensing, Network/Transport, Edge Processing, Cloud Processing, Application",
         wrong: [
             "Physical, Data Link, Network, Transport, Application",
             "Sensors, Actuators, Cloud, Edge, Application",
@@ -133,7 +132,7 @@ const quizData = [
     },
     {
         question: "Which layer is responsible for sensing and collecting data from the physical world?",
-        correct: "The perception or sensing layer",
+        correct: "Perception/Sensing Layer",
         wrong: [
             "Network/Transport Layer",
             "Edge Processing Layer",
@@ -154,9 +153,9 @@ const quizData = [
     // Additional 25 questions to reach 40 total
     {
         question: "Which benefit of IoT involves monitoring equipment and processes as they happen?",
-        correct: "Real-time monitoring",
+        correct: "Real-Time Monitoring",
         wrong: [
-            "Predictive maintenance",
+            "Predictive Maintenance",
             "Cost Reduction",
             "Improved Efficiency",
             "Adaptability"
@@ -164,31 +163,31 @@ const quizData = [
     },
     {
         question: "What IoT benefit allows machines to assemble parts with more precision and speed?",
-        correct: "Process automation",
+        correct: "Automation of Processes",
         wrong: [
-            "Real-time monitoring",
-            "Improved insights",
+            "Real-Time Monitoring",
+            "Improved or New Insights",
             "Optimized Work Environments",
             "Cost Reduction"
         ]
     },
     {
         question: "Which IoT benefit helps identify trends and inefficiencies by analyzing data?",
-        correct: "Improved insights",
+        correct: "Improved or New Insights",
         wrong: [
-            "Predictive maintenance",
-            "Real-time monitoring",
-            "Process automation",
+            "Predictive Maintenance",
+            "Real-Time Monitoring",
+            "Automation of Processes",
             "Adaptability"
         ]
     },
     {
         question: "What IoT benefit involves identifying problems before they cause downtime?",
-        correct: "Predictive maintenance",
+        correct: "Predictive Maintenance",
         wrong: [
             "Cost Reduction",
             "Improved Efficiency",
-            "Real-time monitoring",
+            "Real-Time Monitoring",
             "Optimized Work Environments"
         ]
     },
@@ -224,7 +223,7 @@ const quizData = [
     },
     {
         question: "What does SpO2 measure?",
-        correct: "Blood oxygen levels",
+        correct: "Blood oxygen saturation",
         wrong: [
             "Heart rate variability",
             "Skin conductance",
@@ -264,7 +263,7 @@ const quizData = [
     },
     {
         question: "Which actuator is used in construction equipment?",
-        correct: "Hydraulic actuators",
+        correct: "Hydraulic Actuators",
         wrong: [
             "Electrical motors",
             "Solenoid",
@@ -274,7 +273,7 @@ const quizData = [
     },
     {
         question: "Which actuator type is used in biomedical applications?",
-        correct: "Electroactive polymer",
+        correct: "Electroactive Polymer",
         wrong: [
             "DC Motor",
             "Solenoid",
@@ -284,7 +283,7 @@ const quizData = [
     },
     {
         question: "Which actuator is found in audio systems?",
-        correct: "Voice coil actuators",
+        correct: "Voice Coil Actuators",
         wrong: [
             "Servo",
             "Stepper",
@@ -314,12 +313,12 @@ const quizData = [
     },
     {
         question: "What can Arduino control according to the text?",
-        correct: "A wide range of devices from simple LEDs to large robots",
+        correct: "Almost everything from simple LEDs to giant robots",
         wrong: [
-            "Sensors and actuators exclusively",
-            "Primarily cloud-based solutions",
-            "Network communication protocols",
-            "Other microcontroller boards"
+            "Only sensors",
+            "Only cloud services",
+            "Only network protocols",
+            "Only other Arduinos"
         ]
     },
     {
@@ -399,7 +398,7 @@ const quizData = [
             "Collect data from sensors",
             "Transmit data over networks",
             "Control actuators directly",
-            "Offer real-time processing capabilities"
+            "Provide real-time responses only"
         ]
     },
     {
@@ -414,10 +413,10 @@ const quizData = [
     },
     {
         question: "What is the IoT Ecosystem?",
-        correct: "A network of interconnected devices, infrastructure, computing resources, applications, data, and stakeholders",
+        correct: "An interconnected network of devices, infrastructure, computing resources, applications, data, and stakeholders",
         wrong: [
             "Just sensors and actuators",
-            "Primarily cloud-based solutions",
+            "Only cloud computing services",
             "A single type of device",
             "A standalone application"
         ]
@@ -426,7 +425,7 @@ const quizData = [
         question: "Which layer connects devices to the internet or other networks?",
         correct: "Network/Transport Layer",
         wrong: [
-            "The perception or sensing layer",
+            "Perception/Sensing Layer",
             "Edge Processing Layer",
             "Cloud Processing Layer",
             "Application Layer"
@@ -436,9 +435,9 @@ const quizData = [
         question: "What type of data do IoT sensors provide?",
         correct: "Real-time sensed data",
         wrong: [
-            "Stored historical records",
+            "Historical data only",
             "No data at all",
-            "Data after manual input",
+            "Only after manual entry",
             "Random guesses"
         ]
     },
@@ -469,7 +468,7 @@ const quizData = [
             "Completely isolated",
             "No power source needed",
             "Cannot connect to networks",
-            "Primarily for research purposes"
+            "Only used in laboratories"
         ]
     },
     // Additional IoT1 questions to reach 50
@@ -527,15 +526,15 @@ const quizData = [
         question: "What is the IoT Ecosystem composed of?",
         correct: "Physical devices, communication infrastructure, computing resources, applications, data, and stakeholders",
         wrong: [
-            "Sensors and actuators exclusively",
+            "Only sensors",
             "Just cloud services",
             "Single vendor solutions",
-            "Hardware components exclusively"
+            "Only hardware"
         ]
     },
     {
         question: "What is the purpose of the Perception/Sensing Layer?",
-        correct: "Collecting data from the physical environment via sensors",
+        correct: "Collect data from the physical environment using sensors",
         wrong: [
             "Process cloud data",
             "Provide user interfaces",
@@ -545,7 +544,7 @@ const quizData = [
     },
     {
         question: "What happens in the Network/Transport Layer?",
-        correct: "Data transmission over communication networks",
+        correct: "Data is transmitted over communication networks",
         wrong: [
             "Sensors collect data",
             "Actuators perform actions",
@@ -557,7 +556,7 @@ const quizData = [
         question: "Where does edge processing occur?",
         correct: "Close to the data source, before reaching the cloud",
         wrong: [
-            "Primarily in cloud data centers",
+            "Only in the cloud",
             "At the sensor itself",
             "In distant data centers",
             "Not at all"
@@ -576,20 +575,20 @@ const quizData = [
     // Questions from IoT2_.pdf - IoT Protocols (Chapter 2)
     {
         question: "Why is traditional TCP/IP not automatically the fundamental standard in IoT?",
-        correct: "IoT devices are often constrained with limited computing power, battery-powered, and communicate over lossy networks",
+        correct: "IoT devices are constrained with limited computing power, battery-powered, and communicate over lossy networks",
         wrong: [
             "TCP/IP is too old and outdated",
             "IoT devices don't need networking",
             "TCP/IP is too expensive",
-            "IoT primarily uses wireless communication"
+            "IoT requires only wireless technologies"
         ]
     },
     {
         question: "What is a main building block of IoT networks?",
-        correct: "Wireless Sensor Networks (WSN) or Wireless Sensor and Actuator Networks (WSAN)",
+        correct: "Wireless Sensor Network (WSN) or Wireless Sensor and Actuator Network (WSAN)",
         wrong: [
             "Wired Ethernet networks",
-            "Bluetooth technology exclusively",
+            "Bluetooth only",
             "Satellite communication",
             "Fiber optic cables"
         ]
@@ -599,9 +598,9 @@ const quizData = [
         correct: "A few centimeters up to hundreds of meters",
         wrong: [
             "1-10 kilometers",
-            "Up to 1 meter maximum",
+            "Only up to 1 meter",
             "Unlimited global range",
-            "Requires direct line-of-sight"
+            "Only line-of-sight"
         ]
     },
     {
@@ -626,27 +625,27 @@ const quizData = [
     },
     {
         question: "What is the typical frequency range for RFID?",
-        correct: "Low, high, or ultra-high frequencies",
+        correct: "Low/High/Ultra-high frequencies",
         wrong: [
-            "Primarily 2.4 GHz",
-            "Mainly 13.56 MHz",
-            "Mostly 5 GHz",
-            "Typically 900 MHz"
+            "Only 2.4 GHz",
+            "Only 13.56 MHz",
+            "Only 5 GHz",
+            "Only 900 MHz"
         ]
     },
     {
         question: "What is the typical range of RFID?",
-        correct: "1 centimeter to 100 meters",
+        correct: "1cm - 100m",
         wrong: [
-            "Around 0.2 meters",
-            "Between 10 and 100 meters",
+            "0.2m only",
+            "10-100m only",
             "1-10 km",
             "Unlimited"
         ]
     },
     {
         question: "What is the typical data rate of RFID?",
-        correct: "1 to 100 kbps",
+        correct: "1-100 kbps",
         wrong: [
             "424 kbps",
             "1 Mbps",
@@ -656,22 +655,22 @@ const quizData = [
     },
     {
         question: "What is the battery life of active RFID tags?",
-        correct: "Three to five years",
+        correct: "3-5 years",
         wrong: [
             "Months to years",
             "Passive (no battery)",
-            "A few days at most",
+            "Only a few days",
             "Indefinitely"
         ]
     },
     {
         question: "What is a key role of RFID according to the text?",
-        correct: "Foundation of the IoT concept according to Ashton (1999)",
+        correct: "Foundation of IoT concept (Ashton, 1999)",
         wrong: [
-            "Primarily for payments",
-            "Mainly for human tracking",
-            "Mostly military use",
-            "Primarily internet connectivity"
+            "Only for payment systems",
+            "Only for tracking humans",
+            "Only for military applications",
+            "Only for internet connectivity"
         ]
     },
     {
@@ -706,7 +705,7 @@ const quizData = [
     },
     {
         question: "What is the typical range of NFC?",
-        correct: "Around 0.2 meters",
+        correct: "~0.2m",
         wrong: [
             "1-100m",
             "10-100m",
@@ -718,7 +717,7 @@ const quizData = [
         question: "What is the data rate of NFC?",
         correct: "424 kbps",
         wrong: [
-            "1 to 100 kbps",
+            "1-100 kbps",
             "1 Mbps",
             "10 Mbps",
             "100 Mbps"
@@ -788,9 +787,9 @@ const quizData = [
         question: "What is the battery life of BLE devices?",
         correct: "Months to years",
         wrong: [
-            "3-5 years typically",
+            "3-5 years only",
             "Passive (no battery)",
-            "Just a few hours",
+            "Only a few hours",
             "Continuous replacement needed"
         ]
     },
@@ -806,12 +805,12 @@ const quizData = [
     },
     {
         question: "What is the topology of BLE?",
-        correct: "Peer-to-peer and star network topologies",
+        correct: "P2P / Star",
         wrong: [
-            "Mesh topology exclusively",
-            "Bus topology exclusively",
-            "Ring topology",
-            "Tree structure"
+            "Only Mesh",
+            "Only Bus",
+            "Only Ring",
+            "Only Tree"
         ]
     },
     {
@@ -836,7 +835,7 @@ const quizData = [
     },
     {
         question: "What does RPL stand for?",
-        correct: "Routing Protocol for Low-Power and Lossy Networks (RPL)",
+        correct: "Routing Protocol for Low-Power and Lossy Networks",
         wrong: [
             "Remote Protocol for Link Layer",
             "Routing Protocol for LANs",
@@ -846,7 +845,7 @@ const quizData = [
     },
     {
         question: "What is CoAP?",
-        correct: "Constrained Application Protocol (CoAP)",
+        correct: "Constrained Application Protocol",
         wrong: [
             "Control Application Protocol",
             "Common Application Protocol",
@@ -859,8 +858,8 @@ const quizData = [
         correct: "Constrained IP networks and devices",
         wrong: [
             "High-speed networks",
-            "Wired network infrastructure",
-            "Cloud-based computing",
+            "Wired networks only",
+            "Cloud computing only",
             "Video streaming"
         ]
     },
@@ -870,7 +869,7 @@ const quizData = [
         wrong: [
             "CoAP is faster than HTTP on all networks",
             "CoAP replaces HTTP entirely",
-            "CoAP primarily uses IPv4",
+            "CoAP is only for IPv4",
             "CoAP is more feature-rich than HTTP"
         ]
     },
@@ -878,10 +877,10 @@ const quizData = [
         question: "What type of applications does CoAP support?",
         correct: "RESTful applications",
         wrong: [
-            "Real-time streaming applications",
-            "File transfer scenarios",
-            "Email services",
-            "Database query operations"
+            "Only real-time streaming",
+            "Only file transfers",
+            "Only email",
+            "Only database queries"
         ]
     },
     {
@@ -890,7 +889,7 @@ const quizData = [
         wrong: [
             "Making networks faster",
             "Reducing power consumption",
-            "Security enhancement primarily",
+            "Improving security only",
             "Replacing all IPv4 immediately"
         ]
     },
@@ -900,7 +899,7 @@ const quizData = [
         wrong: [
             "IPv6 is slower",
             "IPv4 has more addresses",
-            "IPv6 mainly for wireless networks",
+            "IPv6 is only for wireless",
             "They are identical"
         ]
     },
@@ -908,10 +907,10 @@ const quizData = [
         question: "Which protocol is used for proxying and caching in CoAP?",
         correct: "CoAP proxy servers",
         wrong: [
-            "HTTP proxy servers",
+            "HTTP proxies only",
             "No proxying is possible",
-            "BLE proxy capabilities",
-            "IPv6 proxy support"
+            "Only BLE can proxy",
+            "Only IPv6 proxies"
         ]
     },
     // Additional IoT2 questions to reach 50 total
@@ -919,10 +918,10 @@ const quizData = [
         question: "What type of networks are WSN and WSAN?",
         correct: "Wireless networks with sensor/actuator nodes",
         wrong: [
-            "Wired network infrastructure",
+            "Wired networks only",
             "Satellite networks",
             "Fiber optic networks",
-            "Cellular network access"
+            "Cellular networks only"
         ]
     },
     {
@@ -950,8 +949,8 @@ const quizData = [
         correct: "IPv6 packets over low-power wireless networks",
         wrong: [
             "IPv4 over high-speed networks",
-            "IPv6 over wired networks",
-            "IPv6 over satellite exclusively",
+            "Only IPv6 on wired networks",
+            "IPv6 over satellite only",
             "No IP networking"
         ]
     },
@@ -962,7 +961,7 @@ const quizData = [
             "High power consumption",
             "Large packet sizes",
             "No addressing",
-            "Wired connectivity exclusively"
+            "Wired connectivity only"
         ]
     },
     {
@@ -972,15 +971,15 @@ const quizData = [
             "High-speed backbone routing",
             "Wired enterprise networks",
             "Satellite networks",
-            "IPv4 networks exclusively"
+            "Only IPv4 networks"
         ]
     },
     {
         question: "What type of topology does RPL typically create?",
         correct: "DODAG (Destination-Oriented Directed Acyclic Graph)",
         wrong: [
-            "Mesh topology exclusively",
-            "Star topology exclusively",
+            "Mesh only",
+            "Star only",
             "Bus topology",
             "Ring topology"
         ]
@@ -1051,200 +1050,18 @@ const quizData = [
         wrong: [
             "Faster transfers",
             "Larger payloads",
-            "IPv6 exclusively",
+            "IPv6 only",
             "No security needed"
         ]
     },
     {
         question: "What is observe option in CoAP used for?",
-        correct: "Notifications for resource state changes using publish-subscribe",
+        correct: "Resource state notifications (publish-subscribe)",
         wrong: [
-            "Caching exclusively",
-            "Proxying exclusively",
-            "Block transfers exclusively",
+            "Caching only",
+            "Proxying only",
+            "Block transfers only",
             "No functionality"
         ]
     }
-];
-
-// Quiz State
-let currentQuestionIndex = 0;
-let score = 0;
-let shuffledQuestions = [];
-let currentAnswers = [];
-let selectedAnswer = null;
-
-// DOM Elements
-const startScreen = document.getElementById('start-screen');
-const quizScreen = document.getElementById('quiz-screen');
-const resultsScreen = document.getElementById('results-screen');
-const startBtn = document.getElementById('start-btn');
-const nextBtn = document.getElementById('next-btn');
-const restartBtn = document.getElementById('restart-btn');
-const questionText = document.getElementById('question-text');
-const answersContainer = document.getElementById('answers-container');
-const questionCounter = document.getElementById('question-counter');
-const scoreDisplay = document.getElementById('score-display');
-const progressFill = document.getElementById('progress');
-const finalScore = document.getElementById('final-score');
-const scoreMessage = document.getElementById('score-message');
-
-// Fisher-Yates shuffle algorithm
-function shuffleArray(array) {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-}
-
-// Initialize quiz
-function initQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    scoreDisplay.textContent = 'Score: 0';
-
-    // Shuffle questions
-    shuffledQuestions = shuffleArray(quizData);
-
-    // For each question, shuffle the answer options
-    shuffledQuestions.forEach(q => {
-        const allAnswers = [q.correct, ...q.wrong];
-        const shuffledAnswers = shuffleArray(allAnswers);
-        currentAnswers.push({
-            question: q.question,
-            answers: shuffledAnswers,
-            correct: q.correct
-        });
-    });
-}
-
-// Display current question
-function displayQuestion() {
-    const currentQ = currentAnswers[currentQuestionIndex];
-    questionText.textContent = currentQ.question;
-
-    // Clear previous answers
-    answersContainer.innerHTML = '';
-
-    // Create answer buttons
-    currentQ.answers.forEach((answer, index) => {
-        const button = document.createElement('button');
-        button.className = 'answer-btn';
-        button.textContent = answer;
-        button.dataset.answer = answer;
-        button.addEventListener('click', () => selectAnswer(button, answer));
-        answersContainer.appendChild(button);
-    });
-
-    // Update progress
-    questionCounter.textContent = `Question ${currentQuestionIndex + 1}/${currentAnswers.length}`;
-    const progressPercent = ((currentQuestionIndex) / currentAnswers.length) * 100;
-    progressFill.style.width = `${progressPercent}%`;
-
-    // Reset selected answer
-    selectedAnswer = null;
-    nextBtn.disabled = true;
-}
-
-// Handle answer selection
-function selectAnswer(button, answer) {
-    // Remove previous selection
-    document.querySelectorAll('.answer-btn').forEach(btn => {
-        btn.classList.remove('selected');
-    });
-
-    // Mark selected
-    button.classList.add('selected');
-    selectedAnswer = answer;
-    nextBtn.disabled = false;
-}
-
-// Show correct/incorrect feedback
-function showFeedback(isCorrect, selectedBtn, correctBtn) {
-    if (isCorrect) {
-        selectedBtn.classList.add('correct');
-    } else {
-        selectedBtn.classList.add('incorrect');
-        correctBtn.classList.add('correct');
-    }
-}
-
-// Move to next question or show results
-function nextQuestion() {
-    const currentQ = currentAnswers[currentQuestionIndex];
-    const selectedBtn = document.querySelector('.answer-btn.selected');
-    const correctBtn = Array.from(document.querySelectorAll('.answer-btn'))
-        .find(btn => btn.dataset.answer === currentQ.correct);
-
-    // Check if answer is correct
-    const isCorrect = selectedAnswer === currentQ.correct;
-    if (isCorrect) {
-        score++;
-        scoreDisplay.textContent = `Score: ${score}`;
-    }
-
-    // Show feedback
-    showFeedback(isCorrect, selectedBtn, correctBtn);
-
-    // Disable all buttons
-    document.querySelectorAll('.answer-btn').forEach(btn => {
-        btn.disabled = true;
-    });
-
-    // Wait before moving to next question
-    setTimeout(() => {
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < currentAnswers.length) {
-            displayQuestion();
-        } else {
-            showResults();
-        }
-    }, 1500);
-}
-
-// Display final results
-function showResults() {
-    quizScreen.classList.remove('active');
-    resultsScreen.classList.add('active');
-
-    finalScore.textContent = `${score} / ${currentAnswers.length}`;
-
-    const percentage = (score / currentAnswers.length) * 100;
-    let message = '';
-
-    if (percentage === 100) {
-        message = "Perfect! You're an IoT expert!";
-    } else if (percentage >= 80) {
-        message = "Excellent! You have great IoT knowledge!";
-    } else if (percentage >= 60) {
-        message = "Good job! You have a solid understanding of IoT.";
-    } else if (percentage >= 40) {
-        message = "Not bad, but there's room for improvement.";
-    } else {
-        message = "Keep studying! Review the IoT material and try again.";
-    }
-
-    scoreMessage.textContent = message;
-}
-
-// Event Listeners
-startBtn.addEventListener('click', () => {
-    startScreen.classList.remove('active');
-    quizScreen.classList.add('active');
-    initQuiz();
-    displayQuestion();
-});
-
-nextBtn.addEventListener('click', nextQuestion);
-
-restartBtn.addEventListener('click', () => {
-    resultsScreen.classList.remove('active');
-    startScreen.classList.add('active');
-});
-
-
-
 
