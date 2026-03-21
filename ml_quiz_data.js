@@ -232,7 +232,7 @@ const quizData = [
         correct: "Split data → fit preprocessor on training only → apply to validation/test → use Pipeline",
         wrong: [
             "Preprocess entire dataset → split → train model",
-            "Split → preprocess each split separately",
+            "Split data → preprocess each split separately",
             "Train model → preprocess predictions",
             "Preprocess → split → train"
         ]
@@ -386,6 +386,7 @@ const quizData = [
         correct: "When false alarms are costly (e.g., spam detection)",
         wrong: [
             "When missing positives is costly",
+            "When you have imbalanced data",
             "When recall is already high",
             "When accuracy is low"
         ]
@@ -478,7 +479,7 @@ const quizData = [
         wrong: [
             "Using a validation set",
             "Stratifying the split",
-            "Normalizing the features",
+            "Normalizing features",
             "Using cross-validation"
         ]
     },
@@ -553,185 +554,3 @@ const quizData = [
         ]
     }
 ];
-
-// Quiz State
-let currentQuestionIndex = 0;
-let score = 0;
-let shuffledQuestions = [];
-let currentAnswers = [];
-let selectedAnswer = null;
-
-// DOM Elements
-const startScreen = document.getElementById('start-screen');
-const quizScreen = document.getElementById('quiz-screen');
-const resultsScreen = document.getElementById('results-screen');
-const startBtn = document.getElementById('start-btn');
-const nextBtn = document.getElementById('next-btn');
-const restartBtn = document.getElementById('restart-btn');
-const questionText = document.getElementById('question-text');
-const answersContainer = document.getElementById('answers-container');
-const questionCounter = document.getElementById('question-counter');
-const scoreDisplay = document.getElementById('score-display');
-const progressFill = document.getElementById('progress');
-const finalScore = document.getElementById('final-score');
-const scoreMessage = document.getElementById('score-message');
-
-// Fisher-Yates shuffle algorithm
-function shuffleArray(array) {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-}
-
-// Initialize quiz
-function initQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    scoreDisplay.textContent = 'Score: 0';
-
-    // Shuffle questions
-    shuffledQuestions = shuffleArray(quizData);
-
-    // For each question, shuffle the answer options
-    shuffledQuestions.forEach(q => {
-        const allAnswers = [q.correct, ...q.wrong];
-        const shuffledAnswers = shuffleArray(allAnswers);
-        currentAnswers.push({
-            question: q.question,
-            answers: shuffledAnswers,
-            correct: q.correct
-        });
-    });
-}
-
-// Display current question
-function displayQuestion() {
-    const currentQ = currentAnswers[currentQuestionIndex];
-    questionText.textContent = currentQ.question;
-
-    // Clear previous answers
-    answersContainer.innerHTML = '';
-
-    // Create answer buttons
-    currentQ.answers.forEach((answer, index) => {
-        const button = document.createElement('button');
-        button.className = 'answer-btn';
-        button.textContent = answer;
-        button.dataset.answer = answer;
-        button.addEventListener('click', () => selectAnswer(button, answer));
-        answersContainer.appendChild(button);
-    });
-
-    // Update progress
-    questionCounter.textContent = `Question ${currentQuestionIndex + 1}/${currentAnswers.length}`;
-    const progressPercent = ((currentQuestionIndex) / currentAnswers.length) * 100;
-    progressFill.style.width = `${progressPercent}%`;
-
-    // Reset selected answer
-    selectedAnswer = null;
-    nextBtn.disabled = true;
-}
-
-// Handle answer selection
-function selectAnswer(button, answer) {
-    // Remove previous selection
-    document.querySelectorAll('.answer-btn').forEach(btn => {
-        btn.classList.remove('selected');
-    });
-
-    // Mark selected
-    button.classList.add('selected');
-    selectedAnswer = answer;
-    nextBtn.disabled = false;
-}
-
-// Show correct/incorrect feedback
-function showFeedback(isCorrect, selectedBtn, correctBtn) {
-    if (isCorrect) {
-        selectedBtn.classList.add('correct');
-    } else {
-        selectedBtn.classList.add('incorrect');
-        correctBtn.classList.add('correct');
-    }
-}
-
-// Move to next question or show results
-function nextQuestion() {
-    const currentQ = currentAnswers[currentQuestionIndex];
-    const selectedBtn = document.querySelector('.answer-btn.selected');
-    const correctBtn = Array.from(document.querySelectorAll('.answer-btn'))
-        .find(btn => btn.dataset.answer === currentQ.correct);
-
-    // Check if answer is correct
-    const isCorrect = selectedAnswer === currentQ.correct;
-    if (isCorrect) {
-        score++;
-        scoreDisplay.textContent = `Score: ${score}`;
-    }
-
-    // Show feedback
-    showFeedback(isCorrect, selectedBtn, correctBtn);
-
-    // Disable all buttons
-    document.querySelectorAll('.answer-btn').forEach(btn => {
-        btn.disabled = true;
-    });
-
-    // Wait before moving to next question
-    setTimeout(() => {
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < currentAnswers.length) {
-            displayQuestion();
-        } else {
-            showResults();
-        }
-    }, 1500);
-}
-
-// Display final results
-function showResults() {
-    quizScreen.classList.remove('active');
-    resultsScreen.classList.add('active');
-
-    finalScore.textContent = `${score} / ${currentAnswers.length}`;
-
-    const percentage = (score / currentAnswers.length) * 100;
-    let message = '';
-
-    if (percentage === 100) {
-        message = "Perfect! You're an ML expert!";
-    } else if (percentage >= 80) {
-        message = "Excellent! You have great Machine Learning knowledge!";
-    } else if (percentage >= 60) {
-        message = "Good job! You have a solid understanding of ML concepts.";
-    } else if (percentage >= 40) {
-        message = "Not bad, but there's room for improvement.";
-    } else {
-        message = "Keep studying! Review the CS 422 material and try again.";
-    }
-
-    scoreMessage.textContent = message;
-}
-
-// Event Listeners
-startBtn.addEventListener('click', () => {
-    startScreen.classList.remove('active');
-    quizScreen.classList.add('active');
-    initQuiz();
-    displayQuestion();
-});
-
-nextBtn.addEventListener('click', nextQuestion);
-
-restartBtn.addEventListener('click', () => {
-    resultsScreen.classList.remove('active');
-    startScreen.classList.add('active');
-});
-
-
-
-
