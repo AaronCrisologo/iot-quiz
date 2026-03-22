@@ -551,6 +551,668 @@ const quizData = [
             "It's not available",
             "It becomes 3-D"
         ]
+    },
+
+    // Additional Scikit-learn Questions from ml-reviwerrr.pdf
+// Scikit-learn Introduction & Basics
+    {
+        question: "What is scikit-learn primarily written in?",
+        correct: "Python (with extensive use of NumPy)",
+        wrong: [
+            "C++ only",
+            "Java",
+            "R",
+            "Julia"
+        ]
+    },
+    {
+        question: "When was the first public release of scikit-learn?",
+        correct: "February 1, 2010",
+        wrong: [
+            "2009",
+            "2012",
+            "2015",
+            "2019"
+        ]
+    },
+    {
+        question: "Which library does scikit-learn NOT directly build upon?",
+        correct: "TensorFlow",
+        wrong: [
+            "NumPy",
+            "SciPy",
+            "Matplotlib"
+        ]
+    },
+    {
+        question: "How can you check the version of scikit-learn installed?",
+        correct: "import sklearn; print(sklearn.__version__)",
+        wrong: [
+            "sklearn.version()",
+            "pip show scikit-learn",
+            "import sklearn; sklearn.version()",
+            "All of the above"
+        ]
+    },
+
+    // Estimator API
+    {
+        question: "What are the two main methods that all scikit-learn estimators implement?",
+        correct: "fit() and predict()",
+        wrong: [
+            "train() and test()",
+            "learn() and infer()",
+            "fit() and transform()",
+            "fit() and score()"
+        ]
+    },
+    {
+        question: "What does the fit() method do?",
+        correct: "Learns the parameters from the training data",
+        wrong: [
+            "Makes predictions on new data",
+            "Evaluates the model",
+            "Scales the features",
+            "Splits the dataset"
+        ]
+    },
+    {
+        question: "What does the predict() method do?",
+        correct: "Makes predictions on new, unseen data",
+        wrong: [
+            "Trains the model",
+            "Scales the input features",
+            "Evaluates performance",
+            "Saves the model"
+        ]
+    },
+    {
+        question: "Which method would you use to transform data without making predictions?",
+        correct: "transform()",
+        wrong: [
+            "predict()",
+            "fit()",
+            "score()",
+            "predict_transform()"
+        ]
+    },
+    {
+        question: "What type of objects implement both fit() and transform()?",
+        correct: "Transformers",
+        wrong: [
+            "Estimators",
+            "Predictors",
+            "Regressors",
+            "Classifiers"
+        ]
+    },
+
+    // Pipelines
+    {
+        question: "What is a Pipeline in scikit-learn?",
+        correct: "A sequence of transformers followed by an estimator",
+        wrong: [
+            "A way to parallelize model training",
+            "A method for hyperparameter tuning",
+            "A data preprocessing technique",
+            "A model evaluation strategy"
+        ]
+    },
+    {
+        question: "Why are Pipelines important?",
+        correct: "They ensure proper sequencing and prevent data leakage",
+        wrong: [
+            "They make code run faster",
+            "They are required by scikit-learn",
+            "They automatically select the best model",
+            "They reduce memory usage"
+        ]
+    },
+    {
+        question: "What happens when you call fit() on a Pipeline?",
+        correct: "Each transformer's fit_transform() is called, then the estimator's fit()",
+        wrong: [
+            "Only the final estimator is fitted",
+            "All components are fitted independently",
+            "The entire pipeline is fitted as one unit",
+            "Transformers are skipped"
+        ]
+    },
+    {
+        question: "What is the correct order in a Pipeline?",
+        correct: "Preprocessing transformers first, then the estimator",
+        wrong: [
+            "Estimator first, then transformers",
+            "Order doesn't matter",
+            "All transformers must be identical",
+            "Estimator in the middle"
+        ]
+    },
+
+    // Model Persistence
+    {
+        question: "How do you save a trained scikit-learn model?",
+        correct: "joblib.dump(model, filename)",
+        wrong: [
+            "model.save(filename)",
+            "pickle.dump(model, filename)",
+            "sklearn.save(model, filename)",
+            "model.to_file(filename)"
+        ]
+    },
+    {
+        question: "How do you load a saved scikit-learn model?",
+        correct: "joblib.load(filename)",
+        wrong: [
+            "pickle.load(filename)",
+            "model.load(filename)",
+            "sklearn.load(filename)",
+            "joblib.open(filename)"
+        ]
+    },
+    {
+        question: "What should you do after loading a saved model?",
+        correct: "Call predict() directly on new data",
+        wrong: [
+            "Refit it on the test set",
+            "Retrain with more data",
+            "Transform it first",
+            "Check the version only"
+        ]
+    },
+    {
+        question: "Why should you NOT refit a loaded model on test data?",
+        correct: "It defeats the purpose of having a saved model and invalidates evaluation",
+        wrong: [
+            "It's not allowed by joblib",
+            "It will crash the program",
+            "It's too slow",
+            "It changes the file format"
+        ]
+    },
+
+    // Cross-Validation
+    {
+        question: "What is cross-validation used for?",
+        correct: "To assess model performance and reduce variance in estimates",
+        wrong: [
+            "To increase training speed",
+            "To replace the need for a test set",
+            "To preprocess the data",
+            "To select features automatically"
+        ]
+    },
+    {
+        question: "What does k-fold cross-validation do?",
+        correct: "Splits data into k folds, uses each as validation once",
+        wrong: [
+            "Creates k different random splits",
+            "Trains k different models",
+            "Uses k different algorithms",
+            "Splits data into k training and 1 test set"
+        ]
+    },
+    {
+        question: "What is stratified k-fold cross-validation?",
+        correct: "Preserves class distribution in each fold",
+        wrong: [
+            "Uses exactly k samples per fold",
+            "Shuffles data k times",
+            "Works only with regression",
+            "Is faster than regular k-fold"
+        ]
+    },
+
+    // Hyperparameter Tuning
+    {
+        question: "What is the purpose of GridSearchCV?",
+        correct: "To exhaustively search over a specified parameter grid",
+        wrong: [
+            "To randomly sample parameters",
+            "To optimize learning rate only",
+            "To select the best features",
+            "To preprocess data"
+        ]
+    },
+    {
+        question: "What is RandomizedSearchCV used for?",
+        correct: "To search parameters randomly, more efficient for large spaces",
+        wrong: [
+            "To search in a grid pattern",
+            "To test only one parameter at a time",
+            "To replace GridSearchCV entirely",
+            "To search only categorical parameters"
+        ]
+    },
+    {
+        question: "What does the 'cv' parameter in GridSearchCV specify?",
+        correct: "Number of cross-validation folds",
+        wrong: [
+            "Number of parameters to test",
+            "Number of jobs to run in parallel",
+            "Validation set size",
+            "Number of iterations"
+        ]
+    },
+    {
+        question: "What does the 'scoring' parameter in GridSearchCV control?",
+        correct: "The metric used to evaluate model performance",
+        wrong: [
+            "The cross-validation strategy",
+            "The parameter grid size",
+            "The random seed",
+            "The verbosity level"
+        ]
+    },
+
+    // Preprocessing
+    {
+        question: "Which transformer is used to fill missing values?",
+        correct: "SimpleImputer",
+        wrong: [
+            "MissingValueFiller",
+            "FillNa",
+            "DataImputer",
+            "ReplaceMissing"
+        ]
+    },
+    {
+        question: "What does StandardScaler do?",
+        correct: "Standardizes features by removing mean and scaling to unit variance",
+        wrong: [
+            "Normalizes to [0, 1] range",
+            "Removes outliers",
+            "Fills missing values",
+            "Encodes categorical variables"
+        ]
+    },
+    {
+        question: "Which transformer is used for one-hot encoding?",
+        correct: "OneHotEncoder",
+        wrong: [
+            "LabelEncoder",
+            "OrdinalEncoder",
+            "CategoryEncoder",
+            "DummyEncoder"
+        ]
+    },
+    {
+        question: "When should you use StandardScaler?",
+        correct: "When features have different scales and algorithm is distance-based",
+        wrong: [
+            "Always, it's required",
+            "Only for classification",
+            "Never, it hurts performance",
+            "Only when all features are numeric"
+        ]
+    },
+    {
+        question: "What is the difference between fit() and transform() for a scaler?",
+        correct: "fit() learns mean/std, transform() applies the scaling",
+        wrong: [
+            "They do the same thing",
+            "fit() applies scaling, transform() learns parameters",
+            "fit() is for training, transform() is for testing",
+            "transform() is faster than fit()"
+        ]
+    },
+    {
+        question: "What is the correct workflow for preprocessing?",
+        correct: "fit on training data only, transform on all splits",
+        wrong: [
+            "fit and transform on entire dataset before splitting",
+            "fit and transform separately on each split",
+            "transform only, no fitting needed",
+            "fit on test data, transform on training"
+        ]
+    },
+
+    // Feature Selection & Dimensionality Reduction
+    {
+        question: "What is the purpose of feature selection?",
+        correct: "To reduce overfitting and improve model performance by selecting relevant features",
+        wrong: [
+            "To increase the number of features",
+            "To make the model more complex",
+            "To ensure all features are used",
+            "To speed up data loading"
+        ]
+    },
+    {
+        question: "What does PCA (Principal Component Analysis) do?",
+        correct: "Reduces dimensionality by creating new uncorrelated features",
+        wrong: [
+            "Selects a subset of original features",
+            "Increases feature space",
+            "Encodes categorical variables",
+            "Scales the features"
+        ]
+    },
+    {
+        question: "What is the key difference between PCA and feature selection?",
+        correct: "PCA creates new features, feature selection chooses existing ones",
+        wrong: [
+            "PCA is faster",
+            "Feature selection always works better",
+            "PCA only works with labeled data",
+            "They are the same thing"
+        ]
+    },
+    {
+        question: "What does LDA (Linear Discriminant Analysis) primarily do?",
+        correct: "Reduces dimensionality while maximizing class separability",
+        wrong: [
+            "Clusters data into groups",
+            "Scales features to unit variance",
+            "Encodes categorical labels",
+            "Fills missing values"
+        ]
+    },
+
+    // Clustering
+    {
+        question: "What type of learning is clustering?",
+        correct: "Unsupervised learning",
+        wrong: [
+            "Supervised learning",
+            "Semi-supervised learning",
+            "Reinforcement learning",
+            "Self-supervised learning"
+        ]
+    },
+    {
+        question: "What does K-means clustering require as input?",
+        correct: "The number of clusters (k)",
+        wrong: [
+            "Class labels",
+            "Distance threshold",
+            "Feature importance scores",
+            "Cluster assignments"
+        ]
+    },
+    {
+        question: "What is the objective function of K-means?",
+        correct: "Minimize the sum of squared distances to cluster centroids",
+        wrong: [
+            "Maximize distance between clusters",
+            "Minimize number of clusters",
+            "Maximize likelihood",
+            "Minimize classification error"
+        ]
+    },
+    {
+        question: "What is a key limitation of K-means?",
+        correct: "Assumes spherical clusters of similar size",
+        wrong: [
+            "Cannot handle categorical data",
+            "Requires labeled data",
+            "Is too slow for large datasets",
+            "Cannot use Euclidean distance"
+        ]
+    },
+    {
+        question: "What does DBSCAN stand for?",
+        correct: "Density-Based Spatial Clustering of Applications with Noise",
+        wrong: [
+            "Distance-Based Spatial Clustering and Noise",
+            "Density-Based Simple Clustering Algorithm",
+            "Dynamic Binary Spatial Clustering",
+            "None of the above"
+        ]
+    },
+    {
+        question: "What is a key advantage of DBSCAN over K-means?",
+        correct: "Can find arbitrarily shaped clusters and handle noise",
+        wrong: [
+            "Always faster",
+            "Requires fewer parameters",
+            "Produces exactly spherical clusters",
+            "Needs predefined number of clusters"
+        ]
+    },
+
+    // Regression Specific
+    {
+        question: "What is LinearRegression used for?",
+        correct: "Predicting a continuous target variable",
+        wrong: [
+            "Classifying samples into categories",
+            "Clustering similar samples",
+            "Reducing the number of features",
+            "Encoding categorical variables"
+        ]
+    },
+    {
+        question: "How do you create a synthetic regression dataset in scikit-learn?",
+        correct: "make_regression()",
+        wrong: [
+            "make_dataset()",
+            "generate_regression()",
+            "synthetic_regression()",
+            "create_regression_data()"
+        ]
+    },
+    {
+        question: "What does R² score measure?",
+        correct: "Proportion of variance explained by the model",
+        wrong: [
+            "Mean squared error",
+            "Classification accuracy",
+            "Number of correct predictions",
+            "Model complexity"
+        ]
+    },
+    {
+        question: "What is the default scoring metric for LinearRegression?",
+        correct: "R²",
+        wrong: [
+            "MSE",
+            "MAE",
+            "Accuracy",
+            "F1 score"
+        ]
+    },
+
+    // Practical Usage
+    {
+        question: "What is the typical workflow for a regression task in scikit-learn?",
+        correct: "Load data → split → preprocess → train → evaluate → save",
+        wrong: [
+            "Preprocess → load → split → train → evaluate",
+            "Split → preprocess → evaluate → train → save",
+            "Train → split → evaluate → preprocess → save",
+            "Load → preprocess → train → split → evaluate"
+        ]
+    },
+    {
+        question: "When splitting data, what is the typical train/validation/test ratio?",
+        correct: "60% train, 20% validation, 20% test",
+        wrong: [
+            "80% train, 10% validation, 10% test",
+            "50% train, 25% validation, 25% test",
+            "70% train, 15% validation, 15% test",
+            "90% train, 5% validation, 5% test"
+        ]
+    },
+    {
+        question: "What should you do before preprocessing?",
+        correct: "Split the data first",
+        wrong: [
+            "Preprocess the entire dataset",
+            "Check the model type",
+            "Normalize all features",
+            "Remove all missing values"
+        ]
+    },
+    {
+        question: "Where does the Pipeline object fit in the ML workflow?",
+        correct: "It combines preprocessing and model training into one object",
+        wrong: [
+            "It replaces cross-validation",
+            "It's only for visualization",
+            "It's used instead of train_test_split",
+            "It's for hyperparameter tuning only"
+        ]
+    },
+
+    // Common Pitfalls
+    {
+        question: "What is a common mistake when using transformers?",
+        correct: "Fitting on the entire dataset before splitting",
+        wrong: [
+            "Using fit_transform() on test data",
+            "Not scaling the features",
+            "Using too many transformers",
+            "Importing the wrong library"
+        ]
+    },
+    {
+        question: "What happens if you call fit_transform() on test data?",
+        correct: "Data leakage occurs, inflating performance",
+        wrong: [
+            "The model automatically retrains",
+            "It's the correct approach",
+            "The transformer ignores it",
+            "An error is thrown"
+        ]
+    },
+    {
+        question: "What should you never do with the test set?",
+        correct: "Use it to make modeling decisions or tune hyperparameters",
+        wrong: [
+            "Evaluate the final model on it",
+            "Load it into memory",
+            "Split it into smaller sets",
+            "Visualize the predictions"
+        ]
+    },
+
+    // Estimator Attributes
+    {
+        question: "After fitting a LinearRegression, where are the coefficients stored?",
+        correct: "model.coef_",
+        wrong: [
+            "model.coefficients",
+            "model.weights",
+            "model.beta",
+            "model.params"
+        ]
+    },
+    {
+        question: "After fitting a LinearRegression, where is the intercept stored?",
+        correct: "model.intercept_",
+        wrong: [
+            "model.bias",
+            "model.offset",
+            "model.constant",
+            "model.intercept"
+        ]
+    },
+    {
+        question: "What does model.n_features_in_ tell you?",
+        correct: "Number of features seen during fitting",
+        wrong: [
+            "Number of predictions made",
+            "Number of training samples",
+            "Number of target classes",
+            "Feature importance scores"
+        ]
+    },
+
+    // Additional Best Practices
+    {
+        question: "What is the purpose of setting random_state in train_test_split?",
+        correct: "To ensure reproducible splits",
+        wrong: [
+            "To shuffle the data more",
+            "To stratify automatically",
+            "To balance the classes",
+            "To speed up splitting"
+        ]
+    },
+    {
+        question: "What does copy_X parameter in LinearRegression control?",
+        correct: "Whether to copy the input matrix before fitting",
+        wrong: [
+            "Whether to copy the coefficients",
+            "Whether to copy the predictions",
+            "Whether to use a copy of the data for prediction",
+            "Whether to backup the model"
+        ]
+    },
+    {
+        question: "When using positive=True in LinearRegression, what is constrained?",
+        correct: "All coefficients must be non-negative",
+        wrong: [
+            "The intercept must be positive",
+            "Predictions must be positive",
+            "The R² score must be positive",
+            "Features must be positive"
+        ]
+    },
+    {
+        question: "What happens if you use positive=True with sparse matrices?",
+        correct: "An error is raised (mutually exclusive)",
+        wrong: [
+            "The matrix is automatically densified",
+            "It works but is slower",
+            "Only non-zero coefficients become positive",
+            "The parameter is ignored"
+        ]
+    },
+
+    // Evaluation
+    {
+        question: "What does model.score() return for a regression model?",
+        correct: "R² (coefficient of determination)",
+        wrong: [
+            "MSE",
+            "MAE",
+            "Accuracy",
+            "F1 score"
+        ]
+    },
+    {
+        question: "Which metric should you use to evaluate a regression model?",
+        correct: "R², MSE, or MAE depending on context",
+        wrong: [
+            "Accuracy only",
+            "F1 score",
+            "Precision and recall",
+            "Confusion matrix"
+        ]
+    },
+
+    // Real-world Application
+    {
+        question: "What is the first step before building any ML model?",
+        correct: "Understand the problem and define the required output",
+        wrong: [
+            "Choose the algorithm",
+            "Preprocess the data",
+            "Split the dataset",
+            "Import libraries"
+        ]
+    },
+    {
+        question: "When should you use a pipeline in production?",
+        correct: "Always, to ensure consistent preprocessing and model application",
+        wrong: [
+            "Only for complex models",
+            "Never, it's too slow",
+            "Only during training",
+            "Only for classification"
+        ]
+    },
+    {
+        question: "What is model persistence?",
+        correct: "Saving and loading trained models for reuse",
+        wrong: [
+            "Keeping models in memory forever",
+            "Using the same model for all tasks",
+            "Never changing the model",
+            "Training models repeatedly"
+        ]
     }
 ];
 
